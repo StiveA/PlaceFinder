@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     final position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
     controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
-        target: LatLng(position.latitude, position.longitude), zoom: 16)));
+        target: LatLng(position.latitude, position.longitude), zoom: 17)));
   }
 
   @override

@@ -1,8 +1,9 @@
 import 'dart:async';
-
-import 'package:finder_app/pages/Utils/helpers.dart';
 import 'package:finder_app/pages/homePage.dart';
+import 'package:finder_app/pages/welcomePage.dart';
 import 'package:flutter/material.dart';
+
+import 'Utils/helpers.dart';
 
 void main() => runApp(const App());
 
@@ -18,7 +19,7 @@ class App extends StatelessWidget {
       home: FutureBuilder(
         future: _permissionResult,
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-          return HomePage(
+          return WelcomePage(
             key: key,
           );
         },
