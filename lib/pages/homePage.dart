@@ -28,15 +28,17 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(children: <Widget>[
-        GoogleMap(
-          myLocationEnabled: true,
-          onMapCreated: _onMapCreated,
-          initialCameraPosition:
-              const CameraPosition(target: LatLng(-24.7199, -53.7433), zoom: 0),
-        )
-      ]),
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(children: <Widget>[
+          GoogleMap(
+            myLocationEnabled: true,
+            onMapCreated: _onMapCreated,
+            initialCameraPosition: const CameraPosition(
+                target: LatLng(-24.7199, -53.7433), zoom: 0),
+          )
+        ]),
+      ),
     );
   }
 }
